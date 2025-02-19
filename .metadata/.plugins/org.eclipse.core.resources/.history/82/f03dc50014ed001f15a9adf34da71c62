@@ -1,0 +1,76 @@
+package QMS.training;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class practice_001 {
+
+	public static void main(String[] args) {
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get("http://18.61.83.180:8080/login");
+		
+//		driver.findElement(By.xpath("////input[@type='text']")).sendKeys("admin");
+		driver.findElement(By.xpath("//input[@formcontrolname='username']")).sendKeys("admin");
+//		driver.findElement(By.xpath("//input[@formcontrolname='username']")).sendKeys("hod-es");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//        driver.findElement(By.xpath("//input[@type='text']")).sendKeys("admin");
+		driver.findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys("admin");
+//		driver.findElement(By.xpath("//input[@formcontrolname='password']")).sendKeys("Abc@1234");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        
+        driver.findElement(By.xpath("//button[contains(text(), 'Login')]")).click();
+//		driver.quit();
+         driver.findElement(By.xpath("//div[@class='container mt-3']//div[3]")).click();
+         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+         driver.findElement(By.xpath("//i[@class='fa fa-link']")).click();
+         driver.findElement(By.xpath("//*[@id=\"accordion\"]/li[3]/ul/li[1]/a")).click();
+         driver.findElement(By.xpath("//ng-multiselect-dropdown[@formcontrolname='changeTypeId']")).click();
+         driver.findElement(By.xpath("//div[text()='TCC']")).click();
+         driver.findElement(By.xpath("//input[@placeholder='Ref. Document Number']")).sendKeys("ABC123");
+         driver.findElement(By.xpath("//ng-multiselect-dropdown[@formcontrolname='departmentId']")).click();
+         driver.findElement(By.xpath("//div[text()='Engineering Services']")).click();
+        // driver.findElement(By.xpath("//ng-multiselect-dropdown[@formcontrolname='typeId']]")).click();
+         driver.findElement(By.xpath("//ng-multiselect-dropdown[@placeholder='Change-In General/Product']")).click();
+         driver.findElement(By.xpath("//div[text()='GENERAL']")).click();
+         driver.findElement(By.xpath("//ng-multiselect-dropdown[@placeholder='Nature Of Change']")).click();
+         driver.findElement(By.xpath("//div[text()='SOP']")).click();
+         driver.findElement(By.xpath("//input[@placeholder='Existing Document Number']")).sendKeys("DOC-123");
+         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+         driver.findElement(By.xpath("//div[p]")).click();
+         driver.findElement(By.xpath("//div[@role='textbox' and @contenteditable='true']")).sendKeys("Change control present status");
+        
+         driver.findElement(By.xpath("(//div[ @contenteditable='true'])[2]")).sendKeys("Change control Proposed change ");
+         driver.findElement(By.xpath("(//div[@contenteditable='true'])[3]")).sendKeys("Reason for change of change cotrol");
+         driver.findElement(By.xpath("//input[@placeholder='Attachment']")).sendKeys("Change Control View (3)");
+         
+         
+//         driver.findElement(By.xpath("//div[@class='image-size-local']")).click();
+          driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//         driver.findElement(By.xpath("//div[@class='image-size-local']//li[5]")).click();
+//         driver.findElement(By.xpath("//div[@class='image-size-local']//li[3]")).click();
+//         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//         driver.findElement(By.xpath("//div[@class='image-size-local']")).click();
+//         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//         driver.findElement(By.xpath("//div[@class='image-size-local']//li[5]")).click();
+          
+         
+         
+         
+        
+         
+         
+         
+         
+         
+		
+
+	}
+
+}
